@@ -4,6 +4,7 @@ import itemData from "../data/items";
 
 function App() {
   const [isDark,setDark] = useState(false)
+  
   function newMode() {
     setDark(!isDark)
   }
@@ -15,10 +16,10 @@ function App() {
   const appClass = false ? "App dark" : "App light"
 
   return (
-    <div className={appClass}>
+    <div className="App Dark">
       <header>
         <h2>Shopster</h2>
-        <button onClick={newMode} >Dark Mode</button>
+        <button onClick={newMode} className={isDark ? "App Dark" :"App"} >Dark Mode</button>
       </header>
       <ShoppingList items={itemData} />
     </div>
